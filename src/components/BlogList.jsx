@@ -11,7 +11,8 @@ function BlogList() {
   const [pageSize, setPAGE_SIZES] = useState("15");
 
   const updateRowsPerPage = (SIZES) => {
-    setPAGE_SIZES(SIZES);
+    parseInt(SIZES);
+    setPAGE_SIZES(+SIZES);
   };
   const updatePage = (pageNumber) => {
     setPage(pageNumber);
